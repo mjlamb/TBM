@@ -1277,8 +1277,11 @@ print(f"Local Mempool app status = {mempool_status}")
 while True:
     # Get BTC network; testnet or mainnet
     get_btc_network()
-    
-    # First screen 60s
+        
+    screen_delay1 = 30
+    screen_delay2 = 10
+        
+    # First screen = screen_delay1
     try:
         # Set mempool url
         mempool_url = get_mempool_base_url()
@@ -1287,61 +1290,61 @@ while True:
         if "Screen1" in userScreenChoices:
             draw_screen1(currency)
             disp.display(disp.buffer)
-            time.sleep(60)
+            time.sleep(screen_delay1)
     except Exception as e:
             print("Error while showing screen1; ",str(e))
 
-    # Second screen 30s
+    # Second screen = screen_delay2
     try:
         if "Screen2" in userScreenChoices:
             draw_screen2()
             disp.display(disp.buffer)
-            time.sleep(30)
+            time.sleep(screen_delay2)
     except Exception as e:
         print("Error while showing screen2; ",str(e))
 
-    # Third screen 30s
+    # Third screen = screen_delay2
     try:
         if "Screen3" in userScreenChoices:
             draw_screen3()
             disp.display(disp.buffer)
-            time.sleep(30)
+            time.sleep(screen_delay2)
     except Exception as e:
         print("Error while showing screen3; ",str(e))
 
-    # Fourth screen 30s
+    # Fourth screen = screen_delay2
     try: 
         if "Screen4" in userScreenChoices:
             draw_screen4()
             disp.display(disp.buffer)
-            time.sleep(30)
+            time.sleep(screen_delay2)
     except Exception as e:
         print("Error while showing screen4; ",str(e))
         
-    # Fifth screen 30s
+    # Fifth screen = screen_delay2
     try: 
         if "Screen5" in userScreenChoices:
             draw_screen5()
             disp.display(disp.buffer)
-            time.sleep(30)
+            time.sleep(screen_delay2)
     except Exception as e:
         print("Error while showing screen5; ",str(e))
         
-    # Sixth screen 30s
+    # Sixth screen = screen_delay2
     try: 
         if "Screen6" in userScreenChoices:
             draw_screen6()
             disp.display(disp.buffer)
-            time.sleep(30)
+            time.sleep(screen_delay2)
     except Exception as e:
         print("Error while showing screen6; ",str(e))
         
-    # Seventh screen 30s
+    # Seventh screen = screen_delay2
     try: 
         if "Screen7" in userScreenChoices:
             draw_screen7()
             disp.display(disp.buffer)
-            time.sleep(30)
+            time.sleep(screen_delay2)
     except Exception as e:
         print("Error while showing screen7; ",str(e))
 
